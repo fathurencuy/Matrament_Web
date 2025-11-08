@@ -12,7 +12,7 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         // Create Admin User
-        User::create([
+        User::updateOrCreate([
             'name' => 'Admin MatraMent',
             'email' => 'admin@matrament.com',
             'password' => Hash::make('password123'),
@@ -22,7 +22,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         // Create Sample Customer
-        User::create([
+        User::updateOrCreate([
             'name' => 'Customer Test',
             'email' => 'customer@test.com',
             'password' => Hash::make('password123'),

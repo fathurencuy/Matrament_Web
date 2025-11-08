@@ -2,7 +2,7 @@
 {{-- resources/views/home/about.blade.php --}}
 @extends('layouts.app')
 
-@section('title', 'Tentang Kami - MatraMent Thrifting')
+@section('title', 'Tentang Kami - Matrament Thrifting')
 
 @section('content')
 <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">

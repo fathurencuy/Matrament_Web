@@ -1,4 +1,3 @@
-{{-- resources/views/admin/products/edit.blade.php --}}
 @extends('layouts.admin')
 
 @section('title', 'Edit Produk')
@@ -106,33 +105,6 @@
                 </a>
             </div>
         </form>
-    </div>
-</div>
-@endsectionh class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Nomor Pesanan</th>
-                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Pelanggan</th>
-                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Total</th>
-                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Status</th>
-                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Tanggal</th>
-                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Aksi</th>
-                </tr>
-            </thead>
-            <tbody class="divide-y divide-gray-200">
-                @foreach($recentOrders as $order)
-                <tr>
-                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">{{ $order->order_number }}</td>
-                    <td class="px-6 py-4 whitespace-nowrap text-sm">{{ $order->customer_name }}</td>
-                    <td class="px-6 py-4 whitespace-nowrap text-sm font-semibold">Rp {{ number_format($order->total, 0, ',', '.') }}</td>
-                    <td class="px-6 py-4 whitespace-nowrap">
-                        <span class="px-2 py-1 text-xs rounded-full {{ $order->status_badge }}">{{ ucfirst($order->status) }}</span>
-                    </td>
-                    <td class="px-6 py-4 whitespace-nowrap text-sm">{{ $order->created_at->format('d M Y') }}</td>
-                    <td class="px-6 py-4 whitespace-nowrap text-sm">
-                        <a href="{{ route('admin.orders.show', $order) }}" class="text-indigo-600 hover:text-indigo-900">Detail</a>
-                    </td>
-                </tr>
-                @endforeach
-            </tbody>
-        </table>
     </div>
 </div>
 @endsection

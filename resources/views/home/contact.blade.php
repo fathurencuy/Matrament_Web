@@ -1,7 +1,7 @@
 {{-- resources/views/home/contact.blade.php --}}
 @extends('layouts.app')
 
-@section('title', 'Kontak - MatraMent Thrifting')
+@section('title', 'Kontak - Matrament Thrifting')
 
 @section('content')
 <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">

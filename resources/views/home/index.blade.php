@@ -1,16 +1,16 @@
 {{-- resources/views/home/index.blade.php --}}
 @extends('layouts.app')
 
-@section('title', 'MatraMent Thrifting - Thrift Store Terbaik')
+@section('title', 'Matrament Thrifting - Thrift Store Terbaik')
 
 @section('content')
 <!-- Hero Section -->
-<div class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
+<div class="bg-gradient-to-r from-indigo-900 to-blue-500 text-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div class="text-center">
-            <h1 class="text-4xl md:text-6xl font-bold mb-4">MatraMent Thrifting</h1>
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Matrament Thrifting</h1>
             <p class="text-xl md:text-2xl mb-8">Fashion Berkelanjutan dengan Harga Terjangkau</p>
-            <a href="{{ route('products.index') }}" class="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition inline-block">
+            <a href="{{ route('products.index') }}" class="bg-white text-indigo-800 px-8 py-3 rounded-lg font-semibold hover:bg-gray-300 transition inline-block">
                 Belanja Sekarang
             </a>
         </div>
@@ -31,7 +31,7 @@
                 @else 🎒
                 @endif
             </div>
-            <h3 class="font-semibold text-gray-800 group-hover:text-indigo-600">{{ $category->name }}</h3>
+            <h3 class="font-semibold text-gray-800 group-hover:text-indigo-800">{{ $category->name }}</h3>
             <p class="text-sm text-gray-500">{{ $category->products_count }} produk</p>
         </a>
         @endforeach
@@ -78,7 +78,7 @@
             </a>
             <div class="p-4">
                 <h3 class="font-semibold">
-                    <a href="{{ route('products.show', $product->slug) }}" class="hover:text-indigo-600">{{ $product->name }}</a>
+                    <a href="{{ route('products.show', $product->slug) }}" class="hover:text-indigo-800">{{ $product->name }}</a>
                 </h3>
                 <p class="text-indigo-600 font-bold mt-2">Rp {{ number_format($product->price, 0, ',', '.') }}</p>
             </div>
@@ -88,7 +88,7 @@
 </div>
 
 <!-- CTA Section -->
-<div class="bg-indigo-600 text-white py-16">
+<div class="bg-indigo-800 text-white py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 class="text-3xl font-bold mb-4">Bergabunglah dengan Gerakan Sustainable Fashion</h2>
         <p class="text-xl mb-8">Belanja pakaian berkualitas sambil menjaga lingkungan</p>

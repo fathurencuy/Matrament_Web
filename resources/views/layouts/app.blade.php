@@ -7,6 +7,8 @@
     <title>@yield('title', 'MatraMent Thrifting - Thrift Store Online')</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+
 </head>
 <body class="bg-gray-50">
     <!-- Navigation -->
@@ -15,13 +17,13 @@
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
                     <a href="{{ route('home') }}" class="flex items-center">
-                        <span class="text-2xl font-bold text-indigo-600">MatraMent</span>
+                        <span class="text-2xl font-bold text-indigo-900">Matrament</span>
                         <span class="ml-1 text-gray-600">Thrifting</span>
                     </a>
                 </div>
 
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="{{ route('home') }}" class="text-gray-700 hover:text-indigo-600 transition">Home</a>
+                    <a href="{{ route('home') }}" class="text-gray-700 hover:text-indigo-700 transition">Home</a>
                     <a href="{{ route('products.index') }}" class="text-gray-700 hover:text-indigo-600 transition">Produk</a>
                     <a href="{{ route('about') }}" class="text-gray-700 hover:text-indigo-600 transition">Tentang</a>
                     <a href="{{ route('contact') }}" class="text-gray-700 hover:text-indigo-600 transition">Kontak</a>
@@ -67,7 +69,7 @@
                         </div>
                     @else
                         <a href="{{ route('login') }}" class="text-gray-700 hover:text-indigo-600">Login</a>
-                        <a href="{{ route('register') }}" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition">Register</a>
+                        <a href="{{ route('register') }}" class="bg-indigo-800 text-white px-4 py-2 rounded-lg hover:bg-indigo-900 transition">Register</a>
                     @endauth
                 </div>
             </div>
@@ -107,11 +109,11 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white mt-16">
+    <footer class="bg-gray-900 text-white mt-0">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
-                    <h3 class="text-xl font-bold mb-4">MatraMent Thrifting</h3>
+                    <h3 class="text-xl font-bold mb-4">Matrament Thrifting</h3>
                     <p class="text-gray-400">Toko pakaian bekas berkualitas dengan harga terjangkau. Sustainable fashion untuk semua.</p>
                 </div>
                 <div>
@@ -135,14 +137,14 @@
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Hubungi Kami</h4>
                     <ul class="space-y-2 text-gray-400">
-                        <li>Email: info@matrament.com</li>
-                        <li>Telepon: 0812-3456-7890</li>
-                        <li>Alamat: Jakarta, Indonesia</li>
+                        <li>Email: Admin@matrament.com</li>
+                        <li>Telepon: 0822-7756-7890</li>
+                        <li>Alamat: Medan, Indonesia</li>
                     </ul>
                 </div>
             </div>
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; 2025 MatraMent Thrifting. All rights reserved.</p>
+            <div class="border-t border-gray-800 w-full mt-5 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Matrament Thrifting. All rights reserved.</p>
             </div>
         </div>
     </footer>

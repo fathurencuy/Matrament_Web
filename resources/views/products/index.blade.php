@@ -1,7 +1,7 @@
 {{-- resources/views/products/index.blade.php --}}
 @extends('layouts.app')
 
-@section('title', 'Semua Produk - MatraMent Thrifting')
+@section('title', 'Semua Produk - Matrament Thrifting')
 
 @section('content')
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
