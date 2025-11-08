@@ -8,9 +8,9 @@
     <!-- Breadcrumb -->
     <nav class="text-sm mb-8">
         <ol class="flex items-center space-x-2">
-            <li><a href="{{ route('home') }}" class="text-indigo-600 hover:underline">Home</a></li>
+            <li><a href="{{ route('home') }}" class="text-indigo-800 hover:underline">Home</a></li>
             <li class="text-gray-500">/</li>
-            <li><a href="{{ route('products.index') }}" class="text-indigo-600 hover:underline">Produk</a></li>
+            <li><a href="{{ route('products.index') }}" class="text-indigo-800 hover:underline">Produk</a></li>
             <li class="text-gray-500">/</li>
             <li class="text-gray-700">{{ $product->name }}</li>
         </ol>
@@ -19,17 +19,17 @@
     <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
         <!-- Product Image -->
         <div>
-            <img src="{{ $product->image_url }}" alt="{{ $product->name }}" class="w-full max-h-96 object-contain rounded-lg shadow-lg">
+            <img src="{{ $product->image_url }}" alt="{{ $product->name }}" class="mx-auto max-h-96 object-contain rounded-lg shadow-lg">
         </div>
 
         <!-- Product Info -->
         <div>
-            <span class="text-sm text-indigo-600 font-semibold">{{ $product->category->name }}</span>
+            <span class="text-sm text-indigo-800 font-semibold">{{ $product->category->name }}</span>
             <h1 class="text-3xl font-bold mt-2 mb-4">{{ $product->name }}</h1>
             
             <div class="flex items-center space-x-4 mb-6">
-                <span class="text-3xl font-bold text-indigo-600">Rp {{ number_format($product->price, 0, ',', '.') }}</span>
-                <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">{{ $product->condition }}</span>
+                <span class="text-3xl font-bold text-indigo-800">Rp {{ number_format($product->price, 0, ',', '.') }}</span>
+                <span class="px-3 py-1 bg-indigo-100 text-indigo-900 rounded-full text-sm">{{ $product->condition }}</span>
             </div>
 
             <div class="border-t border-b py-4 mb-6 space-y-2">
@@ -65,7 +65,7 @@
                     </div>
 
                     <div class="flex space-x-4">
-                        <button type="submit" class="flex-1 bg-indigo-600 text-white py-3 rounded-lg hover:bg-indigo-700 transition font-semibold">
+                        <button type="submit" class="flex-1 bg-indigo-800 text-white py-3 rounded-lg hover:bg-indigo-700 transition font-semibold">
                             Tambah ke Keranjang
                         </button>
                         <button type="button" onclick="event.preventDefault(); document.getElementById('wishlist-form').submit();" class="px-6 py-3 border border-indigo-600 text-indigo-600 rounded-lg hover:bg-indigo-50 transition">

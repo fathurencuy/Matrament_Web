@@ -10,7 +10,7 @@
         <div class="text-center">
             <h1 class="text-4xl md:text-6xl font-bold mb-4">Matrament Thrifting</h1>
             <p class="text-xl md:text-2xl mb-8">Fashion Berkelanjutan dengan Harga Terjangkau</p>
-            <a href="{{ route('products.index') }}" class="bg-white text-indigo-800 px-8 py-3 rounded-lg font-semibold hover:bg-gray-300 transition inline-block">
+            <a href="{{ route('products.index') }}" class="bg-white text-indigo-800 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition inline-block">
                 Belanja Sekarang
             </a>
         </div>
@@ -46,18 +46,18 @@
             @foreach($featuredProducts as $product)
             <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
                 <a href="{{ route('products.show', $product->slug) }}">
-                    <img src="{{ $product->image_url }}" alt="{{ $product->name }}" class="w-full h-64 object-cover">
+                    <img src="{{ $product->image_url }}" alt="{{ $product->name }}" class="mx-auto h-64 object-cover">
                 </a>
                 <div class="p-6">
-                    <span class="text-xs text-indigo-600 font-semibold">{{ $product->category->name }}</span>
+                    <span class="text-xs text-indigo-700 font-semibold">{{ $product->category->name }}</span>
                     <h3 class="text-lg font-semibold mt-2 mb-2">
-                        <a href="{{ route('products.show', $product->slug) }}" class="hover:text-indigo-600">{{ $product->name }}</a>
+                        <a href="{{ route('products.show', $product->slug) }}" class="hover:text-indigo-700">{{ $product->name }}</a>
                     </h3>
                     <div class="flex items-center justify-between">
-                        <span class="text-2xl font-bold text-indigo-600">Rp {{ number_format($product->price, 0, ',', '.') }}</span>
+                        <span class="text-2xl font-bold text-indigo-700">Rp {{ number_format($product->price, 0, ',', '.') }}</span>
                         <span class="text-sm text-gray-500">{{ $product->condition }}</span>
                     </div>
-                    <a href="{{ route('products.show', $product->slug) }}" class="mt-4 block bg-indigo-600 text-white text-center py-2 rounded-lg hover:bg-indigo-700 transition">
+                    <a href="{{ route('products.show', $product->slug) }}" class="mt-4 block bg-indigo-800 text-white text-center py-2 rounded-lg hover:bg-indigo-900 transition">
                         Lihat Detail
                     </a>
                 </div>
@@ -74,13 +74,13 @@
         @foreach($newProducts as $product)
         <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
             <a href="{{ route('products.show', $product->slug) }}">
-                <img src="{{ $product->image_url }}" alt="{{ $product->name }}" class="w-full h-48 object-cover">
+                <img src="{{ $product->image_url }}" alt="{{ $product->name }}" class="mx-auto h-48 object-cover">
             </a>
             <div class="p-4">
                 <h3 class="font-semibold">
                     <a href="{{ route('products.show', $product->slug) }}" class="hover:text-indigo-800">{{ $product->name }}</a>
                 </h3>
-                <p class="text-indigo-600 font-bold mt-2">Rp {{ number_format($product->price, 0, ',', '.') }}</p>
+                <p class="text-indigo-700 font-bold mt-2">Rp {{ number_format($product->price, 0, ',', '.') }}</p>
             </div>
         </div>
         @endforeach
@@ -90,9 +90,10 @@
 <!-- CTA Section -->
 <div class="bg-indigo-800 text-white py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-3xl font-bold mb-4">Bergabunglah dengan Gerakan Sustainable Fashion</h2>
-        <p class="text-xl mb-8">Belanja pakaian berkualitas sambil menjaga lingkungan</p>
-        <a href="{{ route('about') }}" class="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition inline-block">
+        {{-- <h2 class="text-4xl font-bold mb-8">Bergabunglah dengan Gerakan Sustainable Fashion</h2> --}}
+        <p class="font-mono text-2xl mb-4">"Secondhand doesn't mean second best."</p>
+        <p class="text-xl mb-8 italic">-Stella McCartney-</p>
+        <a href="{{ route('about') }}" class="bg-white shadow-lg shadow-indigo-500/50 text-indigo-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition inline-block">
             Pelajari Lebih Lanjut
         </a>
     </div>
